@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Cumpleaños - Fernanda</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Delius+Unicase&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="bg-light sticky-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center p-2">
+                    <h2>MIS XV AÑOS</h2>
+                </div>
+                <div class="col-12 d-none d-md-block col-md-8 text-right">
+                    <ul class="mb-0">
+                        <li class="d-inline-block p-3"><a href="#ubicacion" class="lead text-secondary">Ubicacion</a>
+                        </li>
+                        <li class="d-inline-block p-3"><a href="#asistencia" class="lead text-secondary">Asistencia</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-auto align-self-center text-center py-4 fondo-blanco">
+                    <h1 class="name">FERNANDA CHACON</h1>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="img/fer-1.jpg" class="img-fluid test" alt="Responsive image">
+        </div>
+        <div>
+            <img src="img/fer-2.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12 text-center">
+                    <h2 class="lead text-secondary">Tienes un pase reservado para un vuelo directo a los XV años de:
+                    </h2>
+                    <h1>FERNANDA CHACON</h1>
+                </div>
+            </div>
+            <div class="row border-bottom">
+                <div class="col-6 text-right py-5">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni impedit, consequatur dolorum animi
+                    dolore quaerat minus, molestiae accusantium, vitae aspernatur expedita cum. Vitae possimus culpa,
+                    reiciendis consectetur maiores debitis? Tenetur.
+                </div>
+                <div class="col-6 text-right py-5">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam temporibus quas iusto
+                    necessitatibus minus. Cum sequi inventore deleniti nobis, autem eligendi architecto, rerum quis odit
+                    provident velit veniam earum accusamus.
+                </div>
+            </div>
+        </div>
+        <div class="container" id="ubicacion">
+            <div class="row pb-3 border-bottom">
+                <div class="col-12 text-center py-5">
+                    <h1 class="d-inline-block">UBICACION</h1>
+                </div>
+                <div class="col-12 text-center map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.8496710533587!2d-66.89795357802618!3d10.469203669537144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0!2zMTDCsDI4JzA5LjEiTiA2NsKwNTMnNTMuNiJX!5e0!3m2!1sen!2sbo!4v1659619809868!5m2!1sen!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row pb-3 border-bottom">
+                <div class="col-12 text-center py-5">
+                    <h1 class="d-inline-block">FALTAN</h1>
+                    <div id="cuenta-regresiva">
+                        <li><span id="day"></span>Dias</li>
+                        <li><span id="hour"></span>Horas</li>
+                        <li><span id="minutes"></span>Minutos</li>
+                        <li><span id="seconds"></span>Segundos</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="h-100" id="asistencia">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 offset-md-2 col-md-8">
+                    <div class="col-12 text-center pt-5 pb-2">
+                        <h1 class="d-inline-block">CONFIRMA TU ASISTENCIA</h1>
+                    </div>
+                    <div class="col-12 pb-5">
+                        <form class="p-4 fondo_form">
+                            <div class="form-group">
+                                <label class="lead text-secondary" for="family">Familia:</label>
+                                <input type="text" disabled class="form-control shadow-sm" id="family">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="guests" class="lead text-secondary">Cantidad de Invitados:</label>
+                                <select id="guests" class="form-control">
+                                    <option selected disabled>Seleccionar...</option>
+                                </select>
+                            </div>
+                            <input id="id" name="id" type="hidden" value="">
+                            <div class="form-group mt-5">
+                                <input type="submit" value="CONFIRMAR" id="btn-confirm"
+                                    class="btn btn-block btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="position-fixed btnWhatsapp">
+        <a href="https://wa.me/584242474727" target="_blank">
+            <img src="img/whatsapp.png" alt="Imagen de whatsapp" class="img-fluid">
+        </a>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="js/invitations.js"></script>
+        <script src="js/index.js"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="plugins/jquery.countdown-2.2.0/jquery.countdown.min.js"></script>
+
+</body>
+
+</html>

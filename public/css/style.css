@@ -1,0 +1,94 @@
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+header h1 {
+  font-family: "Delius Unicase", cursive;
+  color: #e4ab9a;
+}
+
+li {
+  font-family: "Delius Unicase", cursive;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .name {
+    font-size: 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .name {
+    font-size: 55px;
+  }
+}
+
+#btn-confirm{
+  background-color: white;
+  color: #e4ab9a;
+  border: 3px solid #e4ab9a;
+  font-size: 18px;
+}
+
+#btn-confirm:hover{
+  background-color: #e4ab9a;
+  color: #fff
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+header .fondo-blanco {
+  background-color: rgba(255, 244, 255, 0.7);
+}
+
+h1,
+h2 {
+  color: #e4ab9a;
+  font-family: "Delius Unicase", cursive;
+}
+
+.btnRosa {
+  color: white;
+  background-color: #e4ab9a;
+  border: 1px, solid #e4ab9a;
+}
+
+.btn-enviar {
+  color: #000;
+  font-weight: bold;
+  background-color: #e4ab9a;
+}
+
+.btnWhatsapp {
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+}
+
+li {
+  text-decoration: none;
+  text-align: center;
+}
