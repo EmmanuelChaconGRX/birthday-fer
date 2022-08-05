@@ -5,7 +5,7 @@ function getGuestList() {
   const id = pathname.replace("/", "");
   console.log(id);
   $.ajax({
-    url: `http://localhost:4800/invitation`,
+    url: `http://localhost:4600/invitation`,
     type: "POST",
     data: {
       id,
