@@ -4,7 +4,7 @@ CREATE TABLE birthday_fer.guests (
 	family varchar(200) NOT NULL,
 	invitations_available varchar(100) NOT NULL,
 	invitations_confirmed varchar(100) NULL,
-	created DATETIME NULL,
+	updated_at DATETIME NULL,
 	CONSTRAINT guests_PK PRIMARY KEY (id)
 )
 ENGINE=InnoDB
