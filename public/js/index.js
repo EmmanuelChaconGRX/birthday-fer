@@ -39,8 +39,8 @@ $(function(){
       success: function (data) {
         console.log(data);
         Swal.fire(
-          'Perfecto!',
-          'Gracias por confirmar tu asistencia',
+          '¡Muchas gracias por confirmar tu asistencia!',
+          '',
           'success'
         )
       },

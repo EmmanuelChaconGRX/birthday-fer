@@ -30,6 +30,8 @@ function getGuestList() {
       $('#guests').find('option').each(function(index,option){
         if($(option).val() == invitations_confirmed){
           $(this).attr('selected', 'true');
+      }else if($(option).val() == invitations_available){
+          $(this).attr('selected', 'true');
       }
       })
 
