@@ -13,8 +13,24 @@ $(function(){
     const id = $('#id').val();
     const confirmedGuestsNumber = $('#guests').val();
 
+    console.log('ESTO',confirmedGuestsNumber);
+
+    //Validation 
+    if (!confirmedGuestsNumber) {
+      Swal.fire(
+        'Error!',
+        'Por favor seleccione una cantidad de invitados',
+        'error'
+      )
+      return;
+    }
+
+    //DEV
+    // url = "http://localhost:4600/guestConfirm"
+    //PROD
+    url = "http://18.188.83.23/guestConfirm"
     $.ajax({
-      url: "http://localhost:4600/guestConfirm",
+      url,
       type: "PUT",
       data: {
         id,
