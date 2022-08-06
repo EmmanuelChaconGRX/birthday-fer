@@ -59,6 +59,19 @@ function getGuestList() {
 
       $("#id").val(id);
     },
+    error: function(data) {
+      Swal.fire(
+        '¡Url Incorrecta!',
+        'Por favor pida que se le envie nuevamente la URL!',
+        'error'
+      ).then((result) => {
+        console.log(result);
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          window.location.href = "http://18.188.83.23/error/404";
+        } 
+      })
+    }
   });
 }
 

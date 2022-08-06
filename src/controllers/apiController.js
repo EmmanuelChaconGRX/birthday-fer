@@ -16,16 +16,27 @@ export default {
       const sql = `SELECT * FROM guests WHERE id='${id}' LIMIT 1`;
       con.query(sql, function (err, result) {
         if (err) throw err;
-        const { id, family, invitations_available, invitations_confirmed } = result[0];
-        console.log(result[0]);
-        res.status(200).json({
-          id,
-          family,
-          invitations_available,
-          invitations_confirmed
-        });
+        console.log("DB",result[0]);
+        if (result[0]) {
+          const { id, family, invitations_available, invitations_confirmed } = result[0];
+          console.log(result[0]);
+          res.status(200).json({
+            id,
+            family,
+            invitations_available,
+            invitations_confirmed
+          });
+        }else{
+          res.status(500).json({
+            message:'Solicite una nueva URL'
+          })
+        }
       });
-    } catch (error) {}
+    } catch (error) {
+      res.status(500).json({
+        error
+      })
+    }
   },
 
   guestConfirm: async (req, res) => {
