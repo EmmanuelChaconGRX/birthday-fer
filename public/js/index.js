@@ -12,6 +12,7 @@ $(function(){
     e.preventDefault();
     const id = $('#id').val();
     const confirmedGuestsNumber = $('#guests').val();
+    const guestName = $('#guestName').text()
 
     console.log('ESTO',confirmedGuestsNumber);
 
@@ -28,13 +29,14 @@ $(function(){
     //DEV
     // url = "http://localhost:4600/guestConfirm"
     //PROD
-    url = "http://18.188.83.23/guestConfirm"
+    // url = "http://18.188.83.23/guestConfirm"
     $.ajax({
       url,
       type: "PUT",
       data: {
         id,
         confirmedGuestsNumber,
+        guestName
       },
       success: function (data) {
         console.log(data);

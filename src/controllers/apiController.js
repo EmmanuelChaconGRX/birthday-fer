@@ -1,3 +1,4 @@
+var nodemailer = require('nodemailer');
 import con from "../database/config";
 export default {
   index: async (req, res) => {
@@ -25,8 +26,8 @@ export default {
   },
 
   guestConfirm: async (req, res) => {
-    console.log(req.body);
-    const { id, confirmedGuestsNumber } = req.body;
+    console.log("ESTO TENGO",req.body);
+    const { id, confirmedGuestsNumber, guestName } = req.body;
     console.log(id, confirmedGuestsNumber);
     try {
       const sql = `UPDATE guests SET invitations_confirmed = '${confirmedGuestsNumber}', updated_at = now() WHERE id='${id}'`;
@@ -36,6 +37,39 @@ export default {
         res.status(200).json({
           message: "success",
         });
+
+
+
+        //
+
+        var transporter = nodemailer.createTransport(
+          {
+            host:"smtp.gmail.com",
+            port:465,
+            secure:true,
+            auth:{
+              user:"emmanuelchacon22@gmail.com",
+              pass: "yihiwudkqkygfvez"
+            }
+          }
+        )
+  //luis@lchacon.com, erika.aponte1@gmail.com
+        var mailOptions = {
+          from: "Remitente",
+          to: "echacon@greicodex.com, luis@lchacon.com, erika.aponte1@gmail.com",
+          subject: "¡Hey un Invitado ha confirmado! ✔",
+          text: "", // plain text body
+          html: `<b>${guestName}</b> ha confirmado su asistencia, numero de invitaciones: <b>${confirmedGuestsNumber}</b>`, // html body
+        }
+  
+        transporter.sendMail(mailOptions, (erro, info) => {
+          if (erro) {
+            console.log(erro);
+          }else{
+            console.log("EMAIL ENVIADO");
+          }
+        });
+  
       });
     } catch (error) {
       console.log("error", error);
