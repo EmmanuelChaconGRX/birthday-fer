@@ -1,6 +1,9 @@
 var nodemailer = require('nodemailer');
 import con from "../database/config";
 export default {
+  error: async (req, res) => {
+    res.render('error');
+  },
   index: async (req, res) => {
     res.render("index");
   },

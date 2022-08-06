@@ -4,8 +4,23 @@ function getGuestList() {
   const pathname = window.location.pathname;
   const id = pathname.replace("/", "");
   console.log(id);
+  if (!parseInt(id)) {
+    console.log('Error')
+    Swal.fire(
+      '¡Url Incorrecta!',
+      'Por favor pida que se le envie nuevamente la URL!',
+      'error'
+    ).then((result) => {
+      console.log(result);
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        window.location.href = "http://18.188.83.23/error/404";
+      } 
+    })
+    return;
+  }
   //DEV
-  // url='http://localhost:4600/invitation';
+  // url='http://localhost:5001/invitation';
   //PROD
   url = 'http://18.188.83.23/invitation'
   $.ajax({
@@ -17,6 +32,13 @@ function getGuestList() {
     success: function (data) {
       const {id, family, invitations_available, invitations_confirmed } = data;
       console.log("COFIRMADO", invitations_confirmed);
+      // if (invitations_confirmed) {
+      //   Swal.fire(
+      //     `Uste confirmó ${invitations_confirmed} invitaciones`,
+      //     'Puede modificar el numero de invitaciones cuando guste',
+      //     'success'
+      //   )
+      // }
       $('#guestName').text(family.toUpperCase());
       for (let index = 1; index <= invitations_available; index++) {
         $("#guests").append(

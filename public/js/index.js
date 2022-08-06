@@ -29,7 +29,7 @@ $(function(){
     //DEV
     // url = "http://localhost:4600/guestConfirm"
     //PROD
-    // url = "http://18.188.83.23/guestConfirm"
+    url = "http://18.188.83.23/guestConfirm"
     $.ajax({
       url,
       type: "PUT",
