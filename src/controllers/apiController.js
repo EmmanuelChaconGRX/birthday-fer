@@ -9,10 +9,10 @@ export default {
   },
 
   getInvitationData: async (req, res) => {
-    console.log("LLEGA");
-    console.log(req.body);
-    const { id } = req.body;
     try {
+      console.log("LLEGA");
+      console.log(req.body);
+      const { id } = req.body;
       const sql = `SELECT * FROM guests WHERE id='${id}' LIMIT 1`;
       con.query(sql, function (err, result) {
         if (err) throw err;
