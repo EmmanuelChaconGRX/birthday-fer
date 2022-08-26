@@ -2,10 +2,18 @@ var nodemailer = require('nodemailer');
 import con from "../database/config";
 export default {
   error: async (req, res) => {
-    res.render('error');
+    try {
+      res.render('error');
+    } catch (error) {
+      console.log(error);
+    }
   },
   index: async (req, res) => {
-    res.render("index");
+    try {
+      res.render("index");
+    } catch (error) {
+      console.log(error);
+    }
   },
 
   getInvitationData: async (req, res) => {
@@ -40,10 +48,10 @@ export default {
   },
 
   guestConfirm: async (req, res) => {
-    console.log("ESTO TENGO",req.body);
-    const { id, confirmedGuestsNumber, guestName } = req.body;
-    console.log(id, confirmedGuestsNumber);
     try {
+      console.log("ESTO TENGO",req.body);
+      const { id, confirmedGuestsNumber, guestName } = req.body;
+      console.log(id, confirmedGuestsNumber);
       const sql = `UPDATE guests SET invitations_confirmed = '${confirmedGuestsNumber}', updated_at = now() WHERE id='${id}'`;
       con.query(sql, function (err, result) {
         if (err) throw err;
