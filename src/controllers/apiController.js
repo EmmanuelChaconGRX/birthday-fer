@@ -78,7 +78,7 @@ export default {
   //luis@lchacon.com, erika.aponte1@gmail.com
         var mailOptions = {
           from: "Remitente",
-          to: "echacon@greicodex.com, luis@lchacon.com, erika.aponte1@gmail.com",
+          to: "echacon@greicodex.com",
           subject: "¡Hey un Invitado ha confirmado! ✔",
           text: "", // plain text body
           html: `<b>${guestName}</b> ha confirmado su asistencia, numero de invitaciones: <b>${confirmedGuestsNumber}</b>`, // html body

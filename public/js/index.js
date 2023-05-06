@@ -1,6 +1,6 @@
 $(function(){
   //Cuenta regresiva
-  $('div#cuenta-regresiva').countdown('2022/09/03 15:00:00', function(event){
+  $('div#cuenta-regresiva').countdown('2023/09/03 15:00:00', function(event){
     $('#day').html(event.strftime('%D'));
     $('#hour').html(event.strftime('%H'));
     $('#minutes').html(event.strftime('%M'));
@@ -27,9 +27,9 @@ $(function(){
     }
 
     //DEV
-    // url = "http://localhost:4600/guestConfirm"
+    url = "http://localhost:4500/guestConfirm"
     //PROD
-    url = "http://18.188.83.23/guestConfirm"
+    // url = "http://18.188.83.23/guestConfirm"
     $.ajax({
       url,
       type: "PUT",

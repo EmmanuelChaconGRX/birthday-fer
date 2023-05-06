@@ -14,7 +14,7 @@ function getGuestList() {
       console.log(result);
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        window.location.href = "http://18.188.83.23/error/404";
+        window.location.href = "http://localhost:4500/error/404";
       } 
     })
     return;
@@ -22,7 +22,7 @@ function getGuestList() {
   //DEV
   // url='http://localhost:5001/invitation';
   //PROD
-  url = 'http://18.188.83.23/invitation'
+  url = 'http://localhost:4500/invitation'
   $.ajax({
     url,
     type: "POST",
@@ -68,7 +68,7 @@ function getGuestList() {
         console.log(result);
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
-          window.location.href = "http://18.188.83.23/error/404";
+          window.location.href = "http://localhost:4500/error/404";
         } 
       })
     }
